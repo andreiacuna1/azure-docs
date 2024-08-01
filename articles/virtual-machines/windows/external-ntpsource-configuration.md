@@ -49,6 +49,8 @@ To check current time source in your **PDC**, from an elevated command prompt ru
 13. In the *Scope* tab of the newly created GPO navigate to the **Security Filtering** click the *Add* button and browse for the *Domain Controllers* group, then click the *OK* button.
 14. Link the GPO to the **Domain Controllers** Organizational Unit.
 
+**IMPORTANT NOTE:** If the PDC is a virtual machine then set this value *VMICTimeProvider* equal to 0 to prevent trying to keep syncing the time from the host.
+
 >[!NOTE]
 >It can take up to 15 minutes for these changes to be reflected by the system.
 
